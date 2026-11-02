@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100b23">
+  <meta name="description" content="Gachino — неоновое гачи-казино с 12 игровыми слотами. Демо на виртуальных кредитах, без реальных денег.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <title>GACHINO — Gachi Slots Casino | Demo</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <button class="logo side-logo" data-route="home" aria-label="Gachino — главная">
+        <span class="logo-mark">💪</span><span class="logo-text">GACHINO<small>NEON SLOT CLUB</small></span>
+      </button>
+      <div class="side-label">ИГРОВОЙ КЛУБ</div>
+      <nav class="side-nav" aria-label="Основная навигация">
+        <button class="side-link active" data-route="home"><span>⌂</span> Главная</button>
+        <button class="side-link" data-route="slots"><span>▦</span> Все слоты <em>12</em></button>
+        <button class="side-link" data-route="bonuses"><span>✦</span> Бонусы</button>
+        <button class="side-link" data-route="tournaments"><span>♛</span> Турниры</button>
+        <button class="side-link" data-route="vip"><span>◆</span> Gachi VIP</button>
+        <button class="side-link" data-route="history"><span>◷</span> Мой аккаунт</button>
+      </nav>
+      <div class="side-label side-label-second">ПОПУЛЯРНЫЕ ИГРЫ</div>
+      <div class="side-favorites" id="sideFavorites"></div>
+      <div class="sidebar-bottom">
+        <div class="online-pill"><span class="online-dot"></span> Gachino Club <b>ONLINE</b></div>
+        <p>18+ · Только виртуальные кредиты. Никаких реальных ставок или выплат.</p>
+      </div>
+    </aside>
+    <div class="main-column">
+      <header class="topbar">
+        <div class="topbar-start"><button class="hamburger" id="menuToggle" aria-label="Открыть меню">☰</button><span class="topbar-breadcrumb">GACHINO <span class="muted">/</span> <strong id="breadcrumb">Главная</strong></span></div>
+        <div class="topbar-actions">
+          <span class="demo-label"><span></span> DEMO MODE</span>
+          <button class="sound-button" id="soundToggle" title="Звук">♪</button>
+          <div class="balance-chip" id="balanceChip"><span>🪙</span><strong id="balanceValue">5 000</strong><small>GC</small></div>
+          <button class="button button-outline" id="loginButton">Войти</button>
+          <button class="button button-primary" id="registerButton">Играть бесплатно</button>
+          <button class="profile-button hidden" id="profileButton" data-route="history"><span>👤</span><b id="profileName">Игрок</b></button>
+        </div>
+      </header>
+      <main id="mainContent">
+        <section class="page" id="page-home">
+          <section class="hero">
+            <div class="hero-glow"></div><img class="hero-athlete athlete-left" src="/assets/hero-athlete.webp" alt="Атлет в неоновом освещении"><img class="hero-athlete athlete-right" src="/assets/hero-champion.webp" alt="Чемпион Gachino">
+            <div class="hero-copy"><div class="eyebrow"><span>✦</span> WELCOME TO THE CLUB <span>✦</span></div><h1>GACHI<span>NO</span></h1><div class="hero-under">THE ULTIMATE GACHI SLOTS</div><p class="hero-label">ПРИВЕТСТВЕННЫЙ БОНУС</p><div class="hero-offer">5 000 <span>GC</span></div><div class="hero-description">на старте каждому игроку <span>·</span> 12 уникальных слотов</div><button class="button button-gold hero-cta" id="heroPlay">💪 НАЧАТЬ ИГРАТЬ <span>↗</span></button><p class="hero-disclaimer">Игровая валюта не имеет денежной ценности</p></div>
+            <div class="hero-corner"><span>✦ GACHINO ✦</span><strong id="heroJackpot">25K+</strong><small>VIRTUAL JACKPOT</small></div>
+          </section>
+          <div class="ticker"><span>✦</span> BUILT DIFFERENT <span>✦</span> GACHI POWER <span>✦</span> NO REAL MONEY <span>✦</span> LIFT · SPIN · WIN <span>✦</span> GACHINO WORLD <span>✦</span></div>
+          <section class="content-section" id="homeSlots">
+            <div class="section-title-row"><div><div class="micro-heading">EXPLORE THE CLUB</div><h2>💪 ВСЕ GACHI СЛОТЫ</h2><p>Каждый автомат — отдельная легенда качалки.</p></div><button class="text-link" data-route="slots">ВЕСЬ КАТАЛОГ ↗</button></div>
+            <div class="filters-bar"><div class="filters" id="homeFilters"></div><label class="search-box"><span>⌕</span><input id="homeSearch" type="search" placeholder="Поиск слотов..." maxlength="40" aria-label="Поиск слотов"></label></div>
+            <div class="games-grid" id="homeGrid"></div>
+          </section>
+          <section class="dashboard-row">
+            <div class="panel tournament-panel"><div class="panel-head"><div><span class="micro-heading">THE COMPETITION</span><h2>🏆 GAINS CUP</h2></div><span class="mini-badge">● LIVE</span></div><div class="tournament-main"><div class="tournament-trophy">🏆</div><div><span class="tournament-kicker">ЕЖЕНЕДЕЛЬНЫЙ РЕЙТИНГ</span><h3>ЛЕГЕНДЫ ЗАЛА</h3><p>Крути слоты и соревнуйся по выигранным виртуальным кредитам.</p><button class="button button-primary" data-route="tournaments">СМОТРЕТЬ РЕЙТИНГ ↗</button></div></div></div>
+            <div class="panel leaderboard-panel"><div class="panel-head"><div><span class="micro-heading">HALL OF FAME</span><h2>♛ ЛИДЕРЫ КЛУБА</h2></div><button class="text-link" data-route="tournaments">ВСЕ ↗</button></div><div id="homeLeaderboard" class="leaderboard-list"></div></div>
+          </section>
+          <section class="perks-grid"><div class="perk"><span>🎁</span><div><b>Ежедневный бонус</b><p>+500 GC каждые 24 часа</p></div></div><div class="perk"><span>⚡</span><div><b>Free Spins</b><p>Получай бесплатные вращения</p></div></div><div class="perk"><span>🔒</span><div><b>Никаких депозитов</b><p>Только деморежим, без платежей</p></div></div></section>
+        </section>
+        <section class="page hidden" id="page-slots"><div class="page-header"><div class="micro-heading">CHOOSE YOUR CHAMPION</div><h1>КАТАЛОГ СЛОТОВ</h1><p>12 оригинальных гачи-автоматов с настоящей игровой механикой.</p></div><div class="filters-bar"><div class="filters" id="catalogFilters"></div><label class="search-box"><span>⌕</span><input id="catalogSearch" type="search" placeholder="Найти игру..." maxlength="40"></label></div><div class="games-grid" id="catalogGrid"></div></section>
+        <section class="page hidden" id="page-bonuses"><div class="page-header"><div class="micro-heading">POWER UP YOUR BANK</div><h1>БОНУСЫ И МИССИИ</h1><p>Выполняй задания и получай дополнительные виртуальные кредиты.</p></div><div class="bonus-layout"><div class="bonus-feature"><span class="bonus-art">🎁</span><div class="micro-heading">EVERY 24 HOURS</div><h2>ЕЖЕДНЕВНЫЙ БОНУС</h2><strong>+500 GC</strong><p>Получай кредиты для игры раз в сутки.</p><button class="button button-gold" id="claimDaily">ЗАБРАТЬ БОНУС</button><small id="dailyStatus"></small></div><div class="bonus-feature promo-feature"><span class="bonus-art">⚡</span><div class="micro-heading">SECRET GYM CODE</div><h2>ПРОМОКОД</h2><strong>+750 GC</strong><p>Секретный код для участников клуба.</p><form id="promoForm" class="promo-form"><input id="promoInput" placeholder="Введи промокод" maxlength="24" autocomplete="off"><button class="button button-primary" type="submit">АКТИВИРОВАТЬ</button></form><small>Подсказка: название казино заглавными буквами.</small></div></div><div class="section-title-row mission-heading"><div><div class="micro-heading">TRAIN HARD, WIN MORE</div><h2>⭐ МИССИИ</h2></div></div><div id="missionsGrid" class="missions-grid"></div></section>
+        <section class="page hidden" id="page-tournaments"><div class="page-header"><div class="micro-heading">GACHINO HALL OF FAME</div><h1>🏆 ТУРНИР GAINS CUP</h1><p>Общий рейтинг зарегистрированных игроков по сумме виртуальных выигрышей. Призовых денег нет.</p></div><div class="tournament-hero"><div><span class="micro-heading">YOUR STRENGTH. YOUR LEGACY.</span><h2>СЛАВА ЖДЁТ ЧЕМПИОНА</h2><p>Все спины учитываются автоматически. Попади на вершину таблицы!</p></div><span>🏆</span></div><div class="panel"><div class="panel-head"><h2>ТУРНИРНАЯ ТАБЛИЦА</h2><span class="mini-badge">LIVE</span></div><div id="fullLeaderboard" class="leaderboard-list full-leaderboard"></div></div></section>
+        <section class="page hidden" id="page-vip"><div class="page-header"><div class="micro-heading">THE ELITE BROTHERHOOD</div><h1>◆ GACHINO VIP CLUB</h1><p>Виртуальный статус растёт вместе с активностью в клубе.</p></div><div class="vip-hero"><div class="micro-heading">LEVEL UP</div><h2 id="vipTitle">ROOKIE CHAMPION</h2><p id="vipSub">Тренируйся, крути слоты, открывай уровни.</p><div class="progress-track"><div id="vipProgress" class="progress-fill"></div></div><span id="vipCounter">0 / 100 spins</span><div class="vip-tiers"><div><span>🥉</span><strong>ROOKIE</strong><small>0 спинов</small></div><div><span>🥈</span><strong>IRON</strong><small>25 спинов</small></div><div><span>🥇</span><strong>LEGEND</strong><small>100 спинов</small></div><div><span>👑</span><strong>GOD MODE</strong><small>500 спинов</small></div></div></div></section>
+        <section class="page hidden" id="page-history"><div class="page-header"><div class="micro-heading">MY LOCKER ROOM</div><h1>ЛИЧНЫЙ КАБИНЕТ</h1><p>Статистика, история спинов и настройки ответственной игры.</p></div><div id="accountGate"></div><div id="accountContent" class="hidden"><div class="stats-grid" id="accountStats"></div><div class="panel account-panel"><div class="panel-head"><h2>ПОСЛЕДНИЕ ОПЕРАЦИИ</h2><button class="text-link" id="refreshHistory">ОБНОВИТЬ ↻</button></div><div id="historyTable"></div></div><div class="panel settings-panel"><div class="panel-head"><h2>НАСТРОЙКИ ИГРЫ</h2></div><p>Управляй лимитом и делай перерывы. Лимиты применяются сервером.</p><div class="setting-row"><label for="limitInput">Дневной лимит виртуальных ставок (GC)</label><div><input id="limitInput" type="number" step="1000" min="1000" max="100000"><button class="button button-outline" id="saveLimit">Сохранить</button></div></div><div class="setting-row"><label>Добровольный перерыв в игре</label><div><button class="button button-outline" data-cooloff="1">1 час</button><button class="button button-outline" data-cooloff="24">24 часа</button><button class="button button-outline" data-cooloff="168">7 дней</button></div></div><p class="warning-text">Перерыв нельзя отменить раньше срока. Увеличивать лимит можно не чаще одного раза в 24 часа.</p><button class="text-link logout-link" id="logoutButton">Выйти из аккаунта ↗</button></div></div></section>
+      </main>
+      <footer class="footer"><div class="footer-brand"><span>💪</span><b>GACHINO</b><small>NEON SLOT CLUB · 18+</small></div><div><b>ONLY VIRTUAL CREDITS</b><p>Это демонстрационный игровой проект. Нет пополнений, денежных призов, выплат и реальных ставок. Результаты случайны.</p></div><div><b>PLAY RESPONSIBLY</b><p>Делайте перерывы. Используйте дневной лимит. Виртуальные кредиты нельзя обменять на деньги.</p></div></footer>
+    </div>
+  </div>
+  <div id="modalBackdrop" class="modal-backdrop hidden" role="presentation">
+    <div class="game-modal" id="gameModal" role="dialog" aria-modal="true" aria-labelledby="gameTitle">
+      <button class="modal-close" id="closeGame" aria-label="Закрыть">✕</button>
+      <div class="game-top"><img id="gameCover" src="/assets/slots/barbell-bonanza.webp" alt=""><div><span class="micro-heading">GACHINO ORIGINAL SLOT</span><h2 id="gameTitle">BARBELL BONANZA</h2><p id="gameDescription"></p></div><button class="favorite-button" id="gameFavorite" title="В избранное">♡</button></div>
+      <div class="game-area"><div class="reels-frame"><div class="reels-top"><span>⚡ GACHINO REELS</span><span>20 PAYLINES</span></div><div class="reels-grid" id="reelsGrid"></div><div class="reels-bottom"><span id="spinStatus">Готов к игре</span><span id="freeSpinStatus">FREE SPINS: 0</span></div></div><div class="result-message" id="spinResult" aria-live="polite">Выбери ставку и жми SPIN</div><div class="spin-controls"><div class="bet-control"><label>СТАВКА · GC</label><div><button id="betMinus" aria-label="Уменьшить ставку">−</button><strong id="betValue">100</strong><button id="betPlus" aria-label="Увеличить ставку">+</button></div></div><button class="button button-gold spin-button" id="spinButton">↻ SPIN</button><div class="win-display"><label>ВЫИГРЫШ · GC</label><strong id="winValue">0</strong></div></div><div class="game-bottom-info"><span>⭐ WILD заменяет символы</span><span>⚡ 3+ SCATTER = FREE SPINS</span><span>👑 5 корон по центру = JACKPOT</span></div><details class="rules-panel"><summary>Таблица выплат и правила слота ▾</summary><div id="gamePaytable"></div></details></div>
+    </div>
+  </div>
+  <div id="authBackdrop" class="modal-backdrop hidden" role="presentation"><div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="authTitle"><button class="modal-close" id="closeAuth" aria-label="Закрыть">✕</button><div class="auth-logo">💪 GACHINO</div><h2 id="authTitle">ВХОД В КЛУБ</h2><p>Демо-аккаунт · Без реальных денег</p><form id="authForm"><label for="authName">ИМЯ ИГРОКА</label><input id="authName" name="name" autocomplete="username" minlength="3" maxlength="22" placeholder="GachiBro"><label for="authPassword">ПАРОЛЬ</label><input type="password" id="authPassword" name="password" minlength="8" maxlength="128" autocomplete="current-password" placeholder="Минимум 8 символов"><button type="submit" class="button button-primary auth-submit" id="authSubmit">ВОЙТИ</button></form><div class="auth-divider">ИЛИ</div><button class="button button-outline guest-button" id="guestButton">⚡ ИГРАТЬ КАК ГОСТЬ</button><p class="auth-switch" id="authSwitch">Нет аккаунта? <button id="switchAuth">Зарегистрироваться</button></p><div class="auth-error" id="authError"></div></div></div>
+  <div id="toastZone" class="toast-zone" aria-live="polite"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
